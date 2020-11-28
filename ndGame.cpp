@@ -1,11 +1,10 @@
 #include <iostream>
 #include <cassert>
-#include <stdlib.h>
-#include <math.h>
 #include <random>
 #include <sstream>
-#include <bitset>
-
+#include <stdlib.h>
+#include <math.h>
+#include <windows.h>
 
 typedef char* cell_t;
 
@@ -320,12 +319,15 @@ int main()
         {
         case -1:
             std::cout << "  Vector doesn't match.\n";
+            Sleep(1000);
             continue;
         case -2:
             std::cout << "  Not on the board.\n";
+            Sleep(1000);
             continue;
         case -3:
             std::cout << "  Position already taken.\n";
+            Sleep(1000);
             continue;
         }
         winner = checkForVector(move_vector, board);
